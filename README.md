@@ -1,57 +1,72 @@
-# NeuroVista - Interactive Neural Network Learning Platform
+# 🧠 NeuroVista - Interactive Neural Network Learning Platform
 
-A comprehensive, interactive platform for learning neural networks through hands-on experimentation and visualization.
+A comprehensive, interactive platform for learning neural networks through hands-on experimentation, real-time visualization, and practical demos.
+
+---
+
+## 🌐 Live Demo
+
+🚀 Frontend (Vercel):  
+https://neuro-vista.vercel.app/
+
+⚙️ Backend (Render):  
+https://neurovista-oc1q.onrender.com/
+
+📘 API Docs (FastAPI Swagger):  
+https://neurovista-oc1q.onrender.com/docs
+
+---
 
 ## 🚀 Features
 
-### Core Modules
+🔬 Perceptron  
+- Interactive playground for single neuron understanding  
+- Binary classification demos  
+- Admission predictor application  
+- Real-time weight visualization  
 
-1. **🔬 Perceptron**
-   - Interactive playground for understanding single neurons
-   - Binary classification demos
-   - Admission predictor application
-   - Real-time weight visualization
+🧬 Multi-Layer Perceptron (MLP)  
+- Deep network exploration with hidden layers  
+- Training visualization  
+- Student performance predictor  
+- Non-linear problem solving  
 
-2. **🧬 Multi-Layer Perceptron (MLP)**
-   - Deep network exploration with hidden layers
-   - Training visualization
-   - Student performance predictor
-   - Non-linear problem solving
+⚖️ Comparison Lab  
+- Side-by-side Perceptron vs MLP  
+- XOR problem demonstration  
+- Decision boundary visualization  
 
-3. **⚖️ Comparison Lab**
-   - Side-by-side Perceptron vs MLP
-   - XOR problem demonstration
-   - Decision boundary visualization
+🧠 Hopfield Network  
+- Pattern storage and recovery  
+- Memory visualization with energy landscapes  
+- Corrupted pattern recovery demo  
+- Hebbian learning visualization  
 
-4. **🧠 Hopfield Network**
-   - Pattern storage and recovery
-   - Memory visualization with energy landscapes
-   - Corrupted pattern recovery demo
-   - Hebbian learning visualization
+👁️ Computer Vision  
+- Emotion detection from images  
+- Attention monitoring (real-time webcam support)  
+- ML-based classification (MediaPipe + Scikit-learn)  
+- Real-time inference simulation  
 
-5. **👁️ Computer Vision**
-   - Emotion detection from images
-   - Object recognition
-   - CNN architecture visualization
-   - Real-time inference simulation
+💬 Sentiment Analysis  
+- Text sentiment classification  
+- Aspect-based sentiment analysis  
+- Emotion detection (6 basic emotions)  
+- Attention weight visualization  
 
-6. **💬 Sentiment Analysis**
-   - Text sentiment classification
-   - Aspect-based sentiment analysis
-   - Emotion detection (6 basic emotions)
-   - Attention weight visualization
+📦 Black Box Unboxing  
+- Neural network evolution (Perceptron → Deep Learning)  
+- AI pipeline visualization  
+- Explainable AI (XAI) concepts  
+- Decision transparency demo  
 
-7. **📦 Black Box Unboxing**
-   - Complete AI pipeline visualization
-   - Data flow through all network types
-   - Explainable AI concepts
-   - Decision transparency demo
+🎯 Knowledge Quiz  
+- 15+ questions across all topics  
+- Score tracking  
+- Weak area detection  
+- Detailed explanations  
 
-8. **🎯 Knowledge Quiz**
-   - 15 questions across all topics
-   - Score tracking and weak area detection
-   - Explanations for each question
-   - Topic-wise filtering
+---
 
 ## 📁 Project Structure
 
@@ -104,175 +119,132 @@ neurovista_lovable/
 └── tsconfig.json                 # TypeScript config
 ```
 
-## 🛠️ Setup & Installation
+## 🛠️ Tech Stack
 
-### Prerequisites
+Frontend:
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Framer Motion
+- Three.js / React Three Fiber
+- Recharts
 
-- Node.js 18+ and npm/pnpm
-- Python 3.8+ (for backend)
+Backend:
+- FastAPI
+- NumPy
+- Pillow
+- Scikit-learn
+- MediaPipe
+- Uvicorn
 
-### Frontend Setup
+---
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   # or
-   pnpm install
-   ```
+## 🔌 API Endpoints
 
-2. **Run development server:**
-   ```bash
-   npm run dev
-   # or
-   pnpm dev
-   ```
+Hopfield Network:
+- POST /hopfield/train
+- POST /hopfield/recover
+- POST /hopfield/add-noise
 
-3. **Open [http://localhost:3000](http://localhost:3000)**
+Computer Vision:
+- POST /cv/analyze
 
-### Backend Setup
+NLP / Sentiment:
+- POST /nlp/predict
+- POST /nlp/train
 
-1. **Navigate to backend directory:**
-   ```bash
-   cd backend
-   ```
+Health:
+- GET /health
 
-2. **Create virtual environment (recommended):**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+---
 
-3. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+## ⚙️ Local Setup
 
-4. **Run FastAPI server:**
-   ```bash
-   uvicorn main:app --reload --port 8000
-   ```
+Frontend:
 
-5. **API documentation available at [http://localhost:8000/docs](http://localhost:8000/docs)**
+npm install  
+npm run dev  
 
-## 🔌 Backend API Endpoints
+Runs on: http://localhost:3000  
 
-### Hopfield Network
+Backend:
 
-- `POST /hopfield/train` - Train network on patterns
-- `POST /hopfield/recover` - Recover pattern from noisy input
-- `POST /hopfield/add-noise` - Add noise to pattern
+cd backend  
+python -m venv venv  
+venv\Scripts\activate  
+pip install -r requirements.txt  
+uvicorn main:app --reload --port 8000  
 
-### Computer Vision
+Runs on: http://localhost:8000  
 
-#changes
+---
 
-- `POST /cv/analyze` - Analyze image (emotion/attention detection)
+## 🔗 Environment Variables (Frontend)
 
-### NLP / Sentiment
+Create a file named .env.local and add:
 
-- `POST /nlp/predict` - Predict sentiment from text
-- `POST /nlp/train` - Train custom sentiment model
+NEXT_PUBLIC_API_URL=https://neurovista-oc1q.onrender.com
 
-### Health
+---
 
-- `GET /health` - Health check endpoint
+## 🚀 Deployment
 
-## 🎨 Design System
+Frontend:
+- Deployed on Vercel
+- Auto-deploy via GitHub
 
-- **Dark theme** with vibrant accent colors
-- **Glass morphism** effects on cards
-- **Smooth animations** using Framer Motion
-- **3D visualizations** with Three.js/React Three Fiber
-- **Responsive design** for all screen sizes
+Backend:
+- Deployed on Render
+- FastAPI server running on cloud
 
-## 🧪 Technologies Used
+---
 
-### Frontend
-- **Next.js 16** - React framework
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Styling
-- **shadcn/ui** - UI components
-- **Framer Motion** - Animations
-- **Three.js / React Three Fiber** - 3D graphics
-- **Recharts** - Charts and visualizations
-- **Lucide React** - Icons
+## 🎨 Key Highlights
 
-### Backend
-- **FastAPI** - Python web framework
-- **NumPy** - Numerical computing
-- **Pillow** - Image processing
-- **Uvicorn** - ASGI server
+- Interactive ML playgrounds  
+- Real-time visualizations  
+- Webcam-based attention detection  
+- Modular architecture  
+- Beginner to advanced learning  
+- Fully deployed full-stack AI project  
 
-## 📝 Key Features
-
-### Interactive Visualizations
-- 3D neuron and network visualizations
-- Real-time training animations
-- Decision boundary plots
-- Energy landscape graphs
-- Attention weight heatmaps
-
-### Educational Content
-- Theory explanations with LaTeX math
-- Step-by-step walkthroughs
-- Interactive playgrounds
-- Sample datasets for experimentation
-
-### Assessment
-- Topic-wise quizzes
-- Score tracking
-- Weak area identification
-- Detailed explanations
-
-## 🔄 Running Both Services
-
-For full functionality with backend integration:
-
-```bash
-# Terminal 1 - Frontend
-cd neurovista_lovable
-pnpm dev
-
-# Terminal 2 - Backend
-cd neurovista_lovable/backend
-uvicorn main:app --reload --port 8000
-```
-
-## 📦 Build for Production
-
-### Frontend
-```bash
-npm run build
-# or
-pnpm build
-```
-
-### Backend
-```bash
-cd backend
-uvicorn main:app --host 0.0.0.0 --port 8000
-```
-
-## 🤝 Contributing
-
-This is a learning platform. Feel free to extend with:
-- New neural network architectures
-- Additional datasets
-- More interactive demos
-- Enhanced visualizations
-
-## 📄 License
-
-MIT License - Feel free to use and modify.
+---
 
 ## 🎯 Learning Outcomes
 
-After completing all modules, you will understand:
-- ✅ How single neurons make decisions
-- ✅ Why multiple layers are needed for complex problems
-- ✅ How associative memory networks work
-- ✅ Computer vision fundamentals with CNNs
-- ✅ NLP and sentiment analysis concepts
-- ✅ How to interpret AI decisions (XAI)
+After using NeuroVista, you will understand:
 
-Happy Learning! 🚀
+- How perceptrons work  
+- Why deep networks are needed  
+- How Hopfield memory works  
+- Basics of computer vision  
+- NLP and sentiment analysis  
+- Explainable AI concepts  
+
+---
+
+## 🤝 Contributing
+
+Feel free to extend with:
+- New ML models  
+- Better datasets  
+- Improved visualizations  
+- Performance optimizations  
+
+---
+
+## 📄 License
+
+MIT License
+
+---
+
+## ⭐ Final Note
+
+This project is a complete interactive AI learning system combining:
+- Theory
+- Visualization
+- Real-world applications
+
+Happy Learning 🚀
