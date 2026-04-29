@@ -164,6 +164,8 @@ neurovista_lovable/
 
 ### Computer Vision
 
+#changes
+
 - `POST /cv/analyze` - Analyze image (emotion/attention detection)
 
 ### NLP / Sentiment
